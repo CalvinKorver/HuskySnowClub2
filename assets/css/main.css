@@ -1227,6 +1227,14 @@ pre {
 .align-right {
   text-align: right; }
 
+div.inner .narrow {
+  padding-left: 5%;
+  padding-right: 5%; }
+
+div.sp-logo-div {
+  width: 150px;
+  margin-left: 33%; }
+
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -1682,6 +1690,13 @@ button,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
+  input[type="submit"].padded,
+  input[type="reset"].padded,
+  input[type="button"].padded,
+  button.padded,
+  .button.padded {
+    width: 175px;
+    padding: 0 0em !important; }
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -2571,7 +2586,14 @@ body.is-loading #banner:after {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
-  display: flex; }
+  display: flex;
+  /*
+  		xlarge: '(max-width: 1680px)',
+  		large: '(max-width: 1280px)',
+  		medium: '(max-width: 980px)',
+  		small: '(max-width: 736px)',
+  		xsmall: '(max-width: 480px)'
+  		*/ }
   #signup .inner p {
     text-align: center; }
   #signup .inner #big-num {
@@ -2590,7 +2612,14 @@ body.is-loading #banner:after {
     -webkit-order: 2;
     -ms-order: 2;
     order: 2;
-    width: 30%; }
+    width: 30%;
+    padding-left: 10%; }
+    @media screen and (max-width: 1280px) {
+      #signup .inner .actions {
+        padding-left: 10%; } }
+    @media screen and (max-width: 980px) {
+      #signup .inner .actions {
+        padding-left: 0%; } }
   @media screen and (max-width: 980px) {
     #signup .inner {
       display: block;

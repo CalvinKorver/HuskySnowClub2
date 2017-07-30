@@ -1,0 +1,21 @@
+CREATE TABLE HSC2017.memberInterest(
+CREATE TABLE MEMBER_INTEREST(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    FName TEXT NOT NULL,
+    LName TEXT NOT NULL,
+    Email TEXT NOT NULL,
+    Class TEXT NOT NULL);
+
+
+CREATE TABLE ADMIN(
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Key TEXT NOT NULL,
+    Type TEXT,
+    Value TEXT,
+    Number INTEGER
+);
+
+
+w
+
+INSERT INTO MEMBER_INTEREST(FName, LName, Email, Class) VALUES("Calvin", "Korver", "calvin.korver@gmail.com", "Senior");
