@@ -17,6 +17,12 @@ class SQLiteConnection {
      */
     public function connect() {
         if ($this->pdo == null) {
+<<<<<<< HEAD
+            $this->pdo = new \PDO("sqlite:" . Config::PATH_TO_SQLITE_FILE);
+        }
+        return $this->pdo;
+    }
+=======
             $s = "sqlite:" . Config::PATH_TO_SQLITE_FILE;
             $this->pdo = new \PDO($s);
         }
@@ -25,4 +31,5 @@ class SQLiteConnection {
     }
 
 
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 }

@@ -21,6 +21,21 @@ class SQLiteInsert {
         $this->pdo = $pdo;
     }
  
+<<<<<<< HEAD
+    /**
+     * Insert a new project into the projects table
+     * @param string $projectName
+     * @return the id of the new project
+     */
+    public function insertProject($projectName) {
+        $sql = 'INSERT INTO projects(project_name) VALUES(:project_name)';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(':project_name', $projectName);
+        $stmt->execute();
+ 
+        return $this->pdo->lastInsertId();
+    }
+=======
     // /**
     //  * Insert a new project into the projects table
     //  * @param string $projectName
@@ -34,6 +49,7 @@ class SQLiteInsert {
  
     //     return $this->pdo->lastInsertId();
     // }
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
  
     /**
      * Insert a new task into the tasks table
@@ -44,6 +60,57 @@ class SQLiteInsert {
      * @param type $projectId
      * @return int id of the inserted task
      */
+<<<<<<< HEAD
+    public function insertTask($taskName, $startDate, $completedDate, $completed, $projectId) {
+        $sql = 'INSERT INTO tasks(task_name,start_date,completed_date,completed,project_id) '
+                . 'VALUES(:task_name,:start_date,:completed_date,:completed,:project_id)';
+ 
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':task_name' => $taskName,
+            ':start_date' => $startDate,
+            ':completed_date' => $completedDate,
+            ':completed' => $completed,
+            ':project_id' => $projectId,
+        ]);
+ 
+        return $this->pdo->lastInsertId();
+    }
+
+    public function getEmailCount($Email) {
+ 
+        $stmt = $this->pdo->prepare('SELECT COUNT(*) 
+                                    FROM MEMBER_INTEREST
+                                   WHERE Email = :Email;');
+        $stmt->bindParam(':Email', $Email);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    }
+
+
+    /*  Inserts new member into the MEMBER_INTEREST Table
+        Returns the ID of the newly entered entry otherwise 0 if email exists */
+    public function insertMemberInterest($fName, $lName, $email, $class) {
+        echo 'checkEmailExists';
+        // $emailRes = $this->checkEmailExists($email);
+        $sql = 'INSERT INTO MEMBER_INTEREST(FName,LName,email,class) '
+                . 'VALUES(:FName,:LName,:email,:class)';
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([
+            ':FName' => $fName,
+            ':LName' => $lName,
+            ':email' => $email,
+            ':class' => $class,
+        ]);
+        echo 'Member inserted';
+        return $this->pdo->lastInsertId();
+    }
+
+
+
+}
+=======
     public function insertInterest($fName, $lName, $email, $class) {
         $sql = 'INSERT INTO MEMBER_INTEREST(FName, LName, Email, Class) VALUES(:FName,:LName,:Email,:Class)';
         
@@ -108,3 +175,4 @@ class SQLiteInsert {
 //         $mysqli_connection->close();
 //     }
 // }
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69

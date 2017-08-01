@@ -1235,6 +1235,12 @@ div.sp-logo-div {
   width: 150px;
   margin-left: 33%; }
 
+<<<<<<< HEAD
+article#main > header > div.interest-result {
+  margin-bottom: 5em; }
+
+=======
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 /* Section/Article */
 section.special, article.special {
   text-align: center; }

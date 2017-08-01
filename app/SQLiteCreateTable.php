@@ -24,6 +24,25 @@ class SQLiteCreateTable {
      * create tables 
      */
     public function createTables() {
+<<<<<<< HEAD
+        $commands = [
+
+            'CREATE TABLE IF NOT EXISTS  (
+                    project_id   INTEGER PRIMARY KEY,
+                    project_name TEXT NOT NULL
+            )',
+
+            'CREATE TABLE IF NOT EXISTS MEMBER_INTEREST (
+                    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    FName TEXT NOT NULL,
+                    LName TEXT NOT NULL,
+                    Email TEXT NOT NULL,
+                    Class TEXT NOT NULL
+            )'
+        ];
+
+
+=======
         $commands = ['CREATE TABLE IF NOT EXISTS projects (
                         project_id   INTEGER PRIMARY KEY,
                         project_name TEXT NOT NULL
@@ -38,6 +57,7 @@ class SQLiteCreateTable {
                     FOREIGN KEY (project_id)
                     REFERENCES projects(project_id) ON UPDATE CASCADE
                                                     ON DELETE CASCADE)'];
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
         // execute the sql commands to create new tables
         foreach ($commands as $command) {
             $this->pdo->exec($command);
@@ -61,4 +81,8 @@ class SQLiteCreateTable {
         return $tables;
     }
  
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69

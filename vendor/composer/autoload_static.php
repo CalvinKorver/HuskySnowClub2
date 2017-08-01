@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
+class ComposerStaticInit91dc187bc0c2b56d4eb120e78277ea7a
+=======
 class ComposerStaticInitea7d078f29e711d219771dc21d713293
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 {
     public static $prefixLengthsPsr4 = array (
         'A' => 
@@ -20,11 +24,25 @@ class ComposerStaticInitea7d078f29e711d219771dc21d713293
         ),
     );
 
+<<<<<<< HEAD
+    public static $classMap = array (
+        'App\\Config' => __DIR__ . '/../..' . '/app/Config.php',
+        'App\\SQLiteConnection' => __DIR__ . '/../..' . '/app/SQLiteConnection.php',
+    );
+
+    public static function getInitializer(ClassLoader $loader)
+    {
+        return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit91dc187bc0c2b56d4eb120e78277ea7a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit91dc187bc0c2b56d4eb120e78277ea7a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit91dc187bc0c2b56d4eb120e78277ea7a::$classMap;
+=======
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitea7d078f29e711d219771dc21d713293::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitea7d078f29e711d219771dc21d713293::$prefixDirsPsr4;
+>>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 
         }, null, ClassLoader::class);
     }
