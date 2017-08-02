@@ -1235,12 +1235,9 @@ div.sp-logo-div {
   width: 150px;
   margin-left: 33%; }
 
-<<<<<<< HEAD
 article#main > header > div.interest-result {
   margin-bottom: 5em; }
 
-=======
->>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 /* Section/Article */
 section.special, article.special {
   text-align: center; }
@@ -1741,6 +1738,12 @@ button,
   button.big,
   .button.big {
     font-size: 1.35em; }
+  input[type="submit"].med,
+  input[type="reset"].med,
+  input[type="button"].med,
+  button.med,
+  .button.med {
+    font-size: 1.2em; }
   input[type="submit"].special,
   input[type="reset"].special,
   input[type="button"].special,
@@ -2619,10 +2622,10 @@ body.is-loading #banner:after {
     -ms-order: 2;
     order: 2;
     width: 30%;
-    padding-left: 10%; }
+    padding-left: 14%; }
     @media screen and (max-width: 1280px) {
       #signup .inner .actions {
-        padding-left: 10%; } }
+        padding-left: 14%; } }
     @media screen and (max-width: 980px) {
       #signup .inner .actions {
         padding-left: 0%; } }
@@ -2694,6 +2697,9 @@ body.is-mobile #main > header {
       color: rgba(255, 255, 255, 0.5); }
       #footer .icons a:hover {
         color: #fff; }
+  #footer #square-logo {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 20px; }
   #footer .copyright {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8em;

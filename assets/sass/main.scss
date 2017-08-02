@@ -223,14 +223,11 @@
 		margin-left: 33%;
 	}
 
-<<<<<<< HEAD
 	article#main > header > div.interest-result {
 		margin-bottom: 5em;
 	}
 
 
-=======
->>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
 /* Section/Article */
 
 	section, article {
@@ -528,6 +525,7 @@
 	}
 
 /* Image */
+
 
 	.image {
 		border-radius: 3px;
@@ -888,6 +886,10 @@
 
 		&.big {
 			font-size: 1.35em;
+		}
+
+		&.med {
+			font-size: 1.2em;
 		}
 
 		&.special {
@@ -1743,10 +1745,10 @@
 			.actions {
 				@include vendor('order', '2');
 				width: 30%;
-				padding-left: 10%;
+				padding-left: 14%;
 				
 				@include breakpoint(large) {
-					padding-left: 10%;
+					padding-left: 14%;
 				}
 
 				@include breakpoint(medium) {
@@ -1857,6 +1859,11 @@
 					color: _palette(fg);
 				}
 			}
+		}
+
+		#square-logo {
+			background-color: rgba(255, 255, 255, 0.5);
+			width: 20px;
 		}
 
 		.copyright {
