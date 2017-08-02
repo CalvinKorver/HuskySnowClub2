@@ -1719,8 +1719,7 @@
 
 			#big-num {
 				font-size: 4em;
-				
-			}
+			}			
 			@include vendor('display', 'flex');
 			// max-width: 45em;
 
@@ -1787,7 +1786,7 @@
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("images/mountains.jpg")'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../../images/mountains.jpg")'));
 			
 			background-attachment: fixed;
 			background-position: center center;
@@ -1918,8 +1917,8 @@
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("images/mountains.jpg")'));
-			@include vendor('background-image', 'url("images/mountains.jpg")');
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url("../..images/mountains.jpg")'));
+			@include vendor('background-image', 'url("../../images/mountains.jpg")');
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;

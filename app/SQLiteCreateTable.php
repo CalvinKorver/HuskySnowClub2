@@ -24,40 +24,34 @@ class SQLiteCreateTable {
      * create tables 
      */
     public function createTables() {
-<<<<<<< HEAD
         $commands = [
 
-            'CREATE TABLE IF NOT EXISTS  (
-                    project_id   INTEGER PRIMARY KEY,
-                    project_name TEXT NOT NULL
-            )',
-
-            'CREATE TABLE IF NOT EXISTS MEMBER_INTEREST (
+            'CREATE TABLE IF NOT EXISTS MEMBER_2017 (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
                     FName TEXT NOT NULL,
                     LName TEXT NOT NULL,
                     Email TEXT NOT NULL,
-                    Class TEXT NOT NULL
-            )'
+                    Class TEXT NOT NULL,
+                    Refer TEXT NOT NULL,
+                    Activity TEXT NOT NULL,
+                    Payment TEXT NOT NULL);
+
+            CREATE TABLE IF NOT EXISTS MEMBER_INTEREST (
+                    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    FName TEXT NOT NULL,
+                    LName TEXT NOT NULL,
+                    Email TEXT NOT NULL,
+                    Class TEXT NOT NULL);
+
+            CREATE TABLE IF NOT EXISTS ADMIN (
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                Key TEXT NOT NULL,
+                Value TEXT,
+                Number INTEGER
+            )
         ];
 
 
-=======
-        $commands = ['CREATE TABLE IF NOT EXISTS projects (
-                        project_id   INTEGER PRIMARY KEY,
-                        project_name TEXT NOT NULL
-                      )',
-            'CREATE TABLE IF NOT EXISTS tasks (
-                    task_id INTEGER PRIMARY KEY,
-                    task_name  VARCHAR (255) NOT NULL,
-                    completed  INTEGER NOT NULL,
-                    start_date TEXT,
-                    completed_date TEXT,
-                    project_id VARCHAR (255),
-                    FOREIGN KEY (project_id)
-                    REFERENCES projects(project_id) ON UPDATE CASCADE
-                                                    ON DELETE CASCADE)'];
->>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
         // execute the sql commands to create new tables
         foreach ($commands as $command) {
             $this->pdo->exec($command);
