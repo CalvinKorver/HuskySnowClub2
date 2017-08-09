@@ -47,7 +47,7 @@ if ($_POST['button-type'] == 'signup') {
     if (!$emailExists && $canSignup) {
         $memberId = $sqlite->insertMemberSignup($fname, $lname, $email, $class, $refer, $activity, $payment);
         if ($memberId != null ) {
-            header("Location: pages/success.html");
+            header("Location: pages/success-signup.html");
         } else {
             header("Location: pages/fail.html");
         }
