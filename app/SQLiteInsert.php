@@ -62,31 +62,25 @@ class SQLiteInsert {
         return $this->pdo->lastInsertId();
     }
 
-    public function getEmailCount($email, $table) {
-
+    /* Returns boolean true if member exists, false otherwise */
+    public function memberExists($email, $table) {
         $tableName = '';
         if ($table == 'interest' ? $tableName = 'MEMBER_INTEREST' : $tableName = 'MEMBER_2017');
         $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM '$tableName' WHERE Email = :Email;");
         $stmt->bindParam(':Email', $email);
-        // $stmt->bindParam(':TableName', $tableName);
         $stmt->execute();
-        return $stmt->fetchColumn();
+        return ($stmt->fetchColumn() > 0);
     }
 
-
     public function checkCashCode($cashcodeAttempt) {
-
         $stmt = $this->pdo->prepare("SELECT Value FROM ADMIN WHERE Key == 'cashcode';");
-        // $stmt->bindParam(':TableName', $tableName);
         $stmt->execute();
         return ($stmt->fetchColumn() == $cashcodeAttempt);
     }
 
-
     /*  Inserts new member into the MEMBER_INTEREST Table
         Returns the ID of the newly entered entry otherwise 0 if email exists */
     public function insertMemberInterest($fName, $lName, $email, $class) {
-        // $emailRes = $this->checkEmailExists($email);
         $sql = 'INSERT INTO MEMBER_INTEREST(FName,LName,email,class) '
                 . 'VALUES(:FName,:LName,:email,:class)';
 
@@ -101,10 +95,8 @@ class SQLiteInsert {
     }
 
     public function insertMemberSignup($fName, $lName, $email, $class, $refer, $activity, $payment) {
-        // $emailRes = $this->checkEmailExists($email);
         $sql = 'INSERT INTO MEMBER_2017(FName,LName,email,class,refer,activity,payment) '
                 . 'VALUES(:FName,:LName,:email,:class,:refer,:activity,:payment)';
-
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([
             ':FName' => strtolower($fName),

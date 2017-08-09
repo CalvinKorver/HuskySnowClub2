@@ -48,7 +48,7 @@ class SQLiteCreateTable {
                 Key TEXT NOT NULL,
                 Value TEXT,
                 Number INTEGER
-            )
+            );'
         ];
 
 
@@ -75,8 +75,4 @@ class SQLiteCreateTable {
         return $tables;
     }
  
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1eefe2ea1d88b163d097b6c01cfc9afade6e6b69
