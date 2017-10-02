@@ -98,3 +98,17 @@
 	});
 
 })(jQuery);
+
+
+vex.defaultOptions.className = 'vex-theme-os';
+vex.dialog.open({
+	message: 'Please enter your username and password:',
+	input: "<input name=\"username\" type=\"text\" placeholder=\"Username\" required />\n<input name=\"password\" type=\"password\" placeholder=\"Password\" required />",
+	buttons: [
+	$.extend({}, vex.dialog.buttons.YES, {
+		text: 'Login'
+	}), $.extend({}, vex.dialog.buttons.NO, {
+		text: 'Back'
+	})
+	],
+});
