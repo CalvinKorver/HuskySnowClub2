@@ -12,12 +12,12 @@ gulp.task('workflow', ['pages', 'index'], function () {
 	gulp.src('./assets/sass/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(cssnano())
-		.pipe(sourcemaps.write('./'))
+		// .pipe(autoprefixer({
+		// 	browsers: ['last 2 versions'],
+		// 	cascade: false
+		// }))
+		// .pipe(cssnano())
+		// .pipe(sourcemaps.write('./'))
 
 	.pipe(gulp.dest('assets/css/'))
 });
