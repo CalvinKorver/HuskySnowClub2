@@ -47,6 +47,7 @@ if ($buttonType == 'admin') {
     }
 
     if ($_POST['button-type'] == 'signup') {
+        $cashError = false;
         if ((isset($_POST['refer']) && $_POST['refer'] != null) ? $refer = $_POST['refer'] : $canSignup = false);
         if ((isset($_POST['payment'])  && $_POST['payment'] != null) ? $payment = $_POST['payment'] : $canSignup = false);
         if ((isset($_POST['activity']) && $_POST['activity'] != null) ? $activity = $_POST['activity'] : $canSignup = false);
