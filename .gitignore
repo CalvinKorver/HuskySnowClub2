@@ -42,6 +42,5 @@ Thumbs.db
 pages/*
 assets/*
 
-# Node Specific #
 node_modules
-
+.vscode/*
