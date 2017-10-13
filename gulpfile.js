@@ -9,7 +9,7 @@ var htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('workflow', ['pages', 'index'], function () {
-	gulp.src('./assets/sass/*.scss')
+	gulp.src('./src/sass/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		// .pipe(autoprefixer({
@@ -36,7 +36,7 @@ gulp.task('index', function() {
 
 
 gulp.task('watch', function () {
-	gulp.watch('./assets/sass/**/*.scss', ['workflow']);
+	gulp.watch('./src/sass/**/*.scss', ['workflow']);
 });
 
 gulp.task('default', ['workflow', 'watch']);
