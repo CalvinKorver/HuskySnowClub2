@@ -148,9 +148,15 @@
 										</select>
 									</div>
 								</div>
-								<div class="12u$ 12u$(xsmall)">
+								<div id="cashcode-checkbox"class="12u$" >
+									<input type="checkbox" id="admin-check" name="admin-check">
+									<label for="admin-check">Officer with code?</label>
+								</div>
+
+								<div id="cashcode-pass-div" class="12u$" style="display:none">
 									<input type="password" name="cashcode" id="demo-email" value="" 
 									placeholder="Cash Code (Leave blank - Admin Only)" />
+									
 								</div>
 								
 								<ul class="actions">
@@ -188,6 +194,7 @@
 	<script src="../assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="../assets/js/main.js"></script>
+	<script src="../assets/js/signup.js"></script>
 
 </body>
 

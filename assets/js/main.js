@@ -97,6 +97,12 @@
 
 	});
 
+	console.log("TEST");
+	val = $("#cashcode-checkbox")
+	if (val.checked) {
+		console.log("Just checked");
+		$("#cashcode-pass-div").show()
+	}
 })(jQuery);
 
 
